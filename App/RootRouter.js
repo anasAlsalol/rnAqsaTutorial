@@ -1,16 +1,14 @@
 import React from 'react';
-import {
-  SafeAreaView, Text, StyleSheet, View,
-} from 'react-native';
+import { SafeAreaView, Text, StyleSheet, View } from 'react-native';
 
 import {
-  //constAndLet,
+  constAndLet,
   // arrowFunctions,
   // destructuring,
   // objAssemblyComputedProps,
   // spreadOperator,
   // promises
-} from './examples'
+} from './examples';
 
 const styles = StyleSheet.create({
   safe: {
@@ -25,7 +23,7 @@ const styles = StyleSheet.create({
   },
 });
 // alert('test');
-//constAndLet();
+constAndLet();
 export default () => (
   <SafeAreaView style={styles.safe}>
     <View style={styles.container}>
