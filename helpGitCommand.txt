@@ -1,0 +1,12 @@
+git push -u origin master
+git add .
+git status
+git rm -r --cached .vscode/
+git checkout master
+git fetch
+git push -u origin 01_end
+git log --oneline -n 20
+git push --set-upstream origin 01_end
+git checkout -b 01_end master
+git checkout -b 01_start  3a029e7
+git commit -m "Remove Tracking vscode"
