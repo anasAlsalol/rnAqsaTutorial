@@ -1,8 +1,11 @@
 node_modules/**/*
 .expo/*
 npm-debug.*
-.idea/*
-yarn.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+
 
 # OSX
 #
@@ -41,6 +44,7 @@ local.properties
 node_modules/
 npm-debug.log
 yarn-error.log
+yarn.lock
 
 # BUCK
 buck-out/

@@ -1,4 +1,3 @@
-import React from 'react';
-import RootRouter from './App/RootRouter';
+import App from './app/index';
 
-export default () => <RootRouter />;
+export default App;
