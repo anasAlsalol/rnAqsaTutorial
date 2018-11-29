@@ -12,8 +12,4 @@ Container.propTypes = {
   children: PropTypes.arrayOf(PropTypes.element),
 };
 
-Container.defaultProps = {
-  //name: 'Stranger'
-};
-
 export default Container;
