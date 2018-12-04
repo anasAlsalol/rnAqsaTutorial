@@ -1,4 +1,4 @@
-//https://fixer.io
+//https://frankfurter.app/
 export default [
   'AUD',
   'BGN',
