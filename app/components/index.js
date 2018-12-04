@@ -5,3 +5,4 @@ export * from './List';
 export * from './Logo';
 export * from './Text';
 export * from './TextInput';
+export * from './Alert';

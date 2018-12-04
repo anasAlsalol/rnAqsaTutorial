@@ -1,3 +1,4 @@
+//https://fixer.io
 export default [
   'AUD',
   'BGN',
