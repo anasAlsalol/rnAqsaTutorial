@@ -10,9 +10,14 @@ import {
   ClearButton,
   LastConverted,
   Header,
+  connectAlert,
 } from '../components';
 
-import { changeCurrencyAmount, swapCurrency } from '../actions/currencies';
+import {
+  changeCurrencyAmount,
+  swapCurrency,
+  getInitialConversion,
+} from '../actions/currencies';
 
 class Home extends Component {
   static propTypes = {
@@ -25,7 +30,21 @@ class Home extends Component {
     lastConvertedDate: PropTypes.object,
     isFetching: PropTypes.bool,
     primaryColor: PropTypes.string,
+    currencyError: PropTypes.string,
+    alertWithType: PropTypes.func,
   };
+
+  componentWillMount() {
+    const { dispatch } = this.props;
+    dispatch(getInitialConversion());
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { currencyError, alertWithType } = this.props;
+    if (nextProps.currencyError && !currencyError) {
+      alertWithType('error', 'Error', nextProps.currencyError);
+    }
+  }
 
   handleChangeText = text => {
     const { dispatch } = this.props;
@@ -126,7 +145,8 @@ const mapStateToProps = state => {
       : new Date(),
     isFetching: conversionSelector.isFetching,
     primaryColor: state.theme.primaryColor,
+    currencyError: state.currencies.error,
   };
 };
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(connectAlert(Home));

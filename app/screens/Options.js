@@ -43,7 +43,7 @@ class Options extends Component {
         />
         <Separator />
         <ListItem
-          text="Handlebar Labs"
+          text="Source Code"
           onPress={this.handlePressSite}
           customIcon={
             <Ionicons
